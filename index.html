@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIP NOTE</title>
+
+    <link rel="shortcut icon" href="./images/favicon_2.png" type="image/x-icon">
+
+    <!--프리텐다드 폰트-->
+    <link rel="stylesheet" href="./fonts/pretendard.css">
+
+
+    <!--메인배너_오토플레이-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="header_inner">
+            <h1 class="logo">
+                <a href="#">
+                    <svg version="1.1" id="logo_svg" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 64"
+                        style="enable-background:new 0 0 500 64;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                fill: #fff;
+                            }
+                        </style>
+                        <g>
+                            <path class="st0" d="M47.5,1.3v11H29.1v52H18v-52H-0.4v-11C-0.4,1.3,47.5,1.3,47.5,1.3z" />
+                            <path class="st0" d="M135.6,1.3v63.1h-11V1.3H135.6z" />
+                            <path class="st0" d="M183,1.1c14.2,0,20.3,8.8,20.3,18.9c0,9.5-5.5,19.8-20.3,19.8h-19.6c-1,0-1.6,0.5-1.6,1.6v22.8h-11V39.3
+		c0-7.1,3-10,9.9-10h22.7c6.3,0,8.8-4.3,8.8-8.7c0-4.6-2.7-8.4-8.7-8.4h-32.8v-11L183,1.1L183,1.1z" />
+                            <path class="st0" d="M250.2,64.2h-11V13.8c0-8.2,4.7-13.7,14.5-13.7c8.8,0,12.7,4.5,15.3,11.7L287.4,52c0.7,1.5,2,2.6,4,2.6
+		c2.3,0,3.7-1.4,3.7-3.6V1.1h11.1v50.4c0,8.3-4.8,13.8-14.5,13.8c-8.8,0-12.8-4.5-15.4-11.7l-18.4-40.3c-0.8-1.9-2-2.7-3.9-2.7
+		c-2.5,0-3.8,1.4-3.8,3.6L250.2,64.2L250.2,64.2z" />
+                            <path class="st0" d="M356.1,1.1c18.3,0,28.5,10.5,28.5,31.7c0,21.1-10.1,31.4-28.5,31.4h-8.6c-18.4,0-28.5-10.3-28.5-31.4
+		c0-21.2,10.2-31.7,28.5-31.7C347.5,1.1,356.1,1.1,356.1,1.1z M347.5,12.2c-12.1,0-17.5,6.2-17.5,20.7c0,14.4,5.2,20.4,17.5,20.4
+		h8.6c12.1,0,17.4-6,17.4-20.5c0-14.4-5.2-20.6-17.4-20.6C356.1,12.2,347.5,12.2,347.5,12.2z" />
+                            <path class="st0"
+                                d="M438.7,1.1v11h-18.4v52h-11.1v-52h-18.4v-11C390.8,1.1,438.7,1.1,438.7,1.1z" />
+                            <path class="st0" d="M499.5,1.1v11h-31.6c-6.6,0-9.5,3.1-9.5,7.9c0,5.1,3.3,7.5,9.6,7.5h31v10h-31.3c-6.4,0-9.6,2.5-9.6,7.7
+		c0,5,3.1,7.9,9.5,7.9h32v11h-32c-15,0-21-7.4-21-17.2c0-7.2,3.3-12.1,9.1-14.5c-5.9-2.4-8.9-7.3-8.9-14.2
+		c0-10.1,6.3-17.2,21.1-17.2L499.5,1.1L499.5,1.1z" />
+                            <path class="st0" d="M78.6,40h10.1H90c14.8,0,20.3-10.3,20.3-19.8c0-10.1-6.1-18.9-20.3-18.9H57.7v11h32.8c6,0,8.7,3.8,8.7,8.4
+		c0,4.4-2.5,8.7-8.8,8.7h-1.6H67.7H63h-0.1c-0.1,0-0.2,0-0.3,0s-0.2,0-0.3,0s-0.2,0-0.2,0c-0.1,0-0.2,0-0.3,0.1
+		c-0.1,0-0.1,0-0.2,0.1c-0.1,0-0.2,0.1-0.3,0.1s-0.1,0-0.2,0.1c-0.1,0-0.2,0.1-0.3,0.1S60.7,30,60.6,30c-0.1,0-0.2,0.1-0.2,0.1
+		c-0.1,0-0.1,0.1-0.2,0.1c-0.1,0-0.1,0.1-0.2,0.1c-0.1,0.1-0.1,0.1-0.2,0.2c-0.1,0-0.1,0.1-0.2,0.1c-0.1,0.1-0.1,0.1-0.2,0.2
+		c-0.1,0.1-0.1,0.1-0.2,0.2c-0.1,0.1-0.1,0.1-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.2c0,0,0,0-0.1,0.1c0,0,0,0.1-0.1,0.1
+		c-0.1,0.1-0.1,0.2-0.2,0.3c0,0.1-0.1,0.1-0.1,0.2c-0.1,0.1-0.1,0.2-0.1,0.3s-0.1,0.1-0.1,0.2c0,0.1-0.1,0.2-0.1,0.3
+		c0,0,0,0.1,0,0.1c0,0.1-0.1,0.2-0.1,0.3s0,0.2-0.1,0.2c0,0.1,0,0.2-0.1,0.2c0,0.1,0,0.2,0,0.3s0,0.2,0,0.2c0,0.1,0,0.2,0,0.3v0.1
+		v0.1c0,0.1,0,0.2,0,0.3s0,0.2,0,0.3s0,0.2,0,0.2c0,0.1,0,0.2,0.1,0.3c0,0.1,0,0.1,0.1,0.2c0,0.1,0.1,0.2,0.1,0.3s0,0.1,0.1,0.2
+		c0,0.1,0.1,0.2,0.1,0.3s0.1,0.1,0.1,0.2c0,0.1,0.1,0.2,0.1,0.2c0,0.1,0.1,0.2,0.1,0.2c0,0.1,0.1,0.1,0.1,0.2
+		c0.1,0.1,0.1,0.2,0.2,0.2c0,0.1,0.1,0.1,0.1,0.2c0.1,0.1,0.1,0.1,0.2,0.2c0.1,0.1,0.1,0.1,0.2,0.2c0.1,0.1,0.1,0.1,0.2,0.2
+		c0.1,0.1,0.1,0.1,0.2,0.2c0,0,0,0,0.1,0.1l33.5,25.5h17.4L78.6,40z" />
+                        </g>
+                    </svg>
+                </a>
+            </h1>
+            <div class="gnb">
+                <!-- <ul class="lang">
+                    <li><a href="#" class="on">KO</a></li>
+                    <li><a href="#">JP</a></li>
+                </ul> -->
+                <p>
+                <div id="page">
+                    <div class="lang_box">
+                        <ul class="lang">
+                            <li><a href="./index.html" class="on">KO</a></li>
+                            <li><a href="https://jinsun1.github.io/tripnote_jp/#">JP</a></li>
+                        </ul>
+                        <div id="toggle">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                    <section id="overlay">
+                        <nav>
+                            <ul>
+                                <li><a href="./app_2.html">어플리케이션 소개</a></li>
+                                <li><a href="./korea.html">테마가있는 여행지</a></li>
+                                <li><a href="./best.html">BEST 해외여행지</a></li>
+                            </ul>
+                        </nav>
+                    </section>
+                </div>
+                </p>
+            </div><!--gnb-->
+        </div><!--header_inner-->
+    </div><!--header-->
+    <div id="main_banner">
+        <!-- Swiper -->
+        <div class="swiper main">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide bg1"></div>
+                <div class="swiper-slide bg2"></div>
+                <div class="swiper-slide bg3"></div>
+            </div>
+            <!--<div class="swiper-button-next bt_next"></div>
+            <div class="swiper-button-prev bt_prev"></div>
+            <div class="swiper-pagination bt_pg"></div>-->
+        </div>
+
+        <div class="text_box">
+            <p>나만의 여행을 <br>
+                자유롭게 기록합니다.</p>
+            <div class="icon_box">
+                <a href="https://www.apple.com/kr/app-store/" target="_blank"><span><img
+                            src="./images/icon/apple_white.png" alt="앱스토어" width="30px" class="appstore">App
+                        Store</span></a>
+                <a href="https://play.google.com/store/games?hl=ko-KR" target="_blank"><span><img
+                            src="./images/icon/google-play_white.png" alt="구글플레이" width="30px">Google
+                        Play</span></a>
+            </div><!--icon_box-->
+        </div><!--text_box-->
+    </div><!--main_banner-->
+
+    <div id="container">
+        <!--뒷 배경-->
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper background_slide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide bg1">
+                </div>
+                <div class="swiper-slide bg2">
+                </div>
+                <div class="swiper-slide bg3">
+                </div>
+                <div class="swiper-slide bg4">
+                </div>
+                <div class="swiper-slide bg5">
+                </div>
+            </div>
+        </div>
+
+        <!--폰-->
+        <div class="phone">
+            <div class="text_po">
+                <p>내 주변 핫플레이스 랭킹</p>
+                <div thumbsSlider="" class="swiper small-slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./images/mobile/phone_slide_m1.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/mobile/phone_slide_m2.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/mobile/phone_slide_m3.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/mobile/phone_slide_m4_4.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/mobile/phone_slide_m5.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./images/pc/phone_500.png" alt="폰이미지">
+        </div>
+    </div><!--container-->
+
+    <div id="korea_slide">
+        <div thumbsSlider="" class="swiper korea_text">
+            <!--글자-->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="kor_text_box">
+                        <h3>사진 작가들이 <br>사랑한 카페 여행</h3>
+                        <h5>맛 뿐만 아니라 분위기도 <br>
+                            놓칠수 없는 사진 작가들이<br>
+                            사랑하는 공간 </h5>
+                        <p><a href="./korea.html">More View</a></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="kor_text_box">
+                        <h3>주말엔 야외에서 <br>
+                            힐링하기</h3>
+                        <h5>주말엔 좋은 공기와 <br>
+                            밤하늘의 별과 함께<br>
+                            힐링하기</h5>
+                        <p><a href="./korea.html">More View</a></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="kor_text_box">
+                        <h3>석양 속 낭만을<br>찾아서</h3>
+                        <h5>나만 알고 있는 <br>
+                            석양이 예쁜 장소를 <br>
+                            알려주세요</h5>
+                        <p><a href="./korea.html">More View</a></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="kor_text_box">
+                        <h3>사진 작가들이 <br>사랑한 카페 여행</h3>
+                        <h5>맛 뿐만 아니라 분위기도 <br>
+                            놓칠수 없는 사진 작가들이<br>
+                            사랑하는 공간 </h5>
+                        <p><a href="./korea.html">More View</a></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="kor_text_box">
+                        <h3>주말엔 야외에서 <br>
+                            힐링하기</h3>
+                        <h5>주말엔 좋은 공기와 <br>
+                            밤하늘의 별과 함께<br>
+                            힐링하기</h5>
+                        <p><a href="./korea.html">More View</a></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="kor_text_box">
+                        <h3>석양 속 낭만을<br>찾아서</h3>
+                        <h5>나만 알고 있는 <br>
+                            석양이 예쁜 장소를 <br>
+                            알려주세요</h5>
+                        <p><a href="./korea.html">More View</a></p>
+                    </div>
+                </div>
+
+            </div>
+            <!--<div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>-->
+        </div>
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper korea_photo">
+            <!--사진-->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/pc/85/slide1.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/pc/85/slide2.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/pc/85/slide3.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/pc/85/slide1.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/pc/85/slide2.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/pc/85/slide3.png" />
+                </div>
+            </div>
+        </div>
+
+    </div><!--korea_slide-->
+
+    <div id="text_slide">
+        <div class="text_wrapper">
+            <h1><img src="./images/logo_line_85.png" alt="라인로고"></h1>
+            <p>나만의 여행 노트를 공유하다</p>
+            <h1><img src="./images/logo_line_85.png" alt="라인로고"></h1>
+            <p>나만의 여행 노트를 공유하다</p>
+            <h1><img src="./images/logo_line_85.png" alt="라인로고"></h1>
+            <p>나만의 여행 노트를 공유하다</p>
+            <h1><img src="./images/logo_line_85.png" alt="라인로고"></h1>
+            <p>나만의 여행 노트를 공유하다</p>
+        </div><!--text_wrapper-->
+    </div><!--text_slide-->
+
+    <div id="best">
+        <h1 class="title">BEST 해외여행지</h1>
+        <ul>
+            <li><a href="./best.html"><img src="./images/pc/85/best1_350.png" alt="베스트1">
+                    <div class="rank_box">
+                        <p>1위</p>
+                    </div><!--rank_box-->
+                    <div class="best_text">
+                        <p>JAPAN</p>
+                        <h2>교토</h2>
+                        <ol>
+                            <li>#벚꽃</li>
+                            <li>#아라시야마</li>
+                        </ol>
+                    </div><!--best_text-->
+                </a></li>
+            <li><a href="./best.html"><img src="./images/pc/85/best2_350.png" alt="베스트2">
+                    <div class="rank_box">
+                        <p>2위</p>
+                    </div><!--rank_box-->
+                    <div class="best_text">
+                        <p>FRANCE</p>
+                        <h2>파리</h2>
+                        <ol>
+                            <li>#에펠탑</li>
+                            <li>#루브르박물관</li>
+                        </ol>
+                    </div><!--best_text-->
+                </a></li>
+            <li><a href="./best.html"><img src="./images/pc/85/best3_350.png" alt="베스트3">
+                    <div class="rank_box">
+                        <p>3위</p>
+                    </div><!--rank_box-->
+                    <div class="best_text">
+                        <p>ITALY</p>
+                        <h2>피렌체</h2>
+                        <ol>
+                            <li>#우피치미술관</li>
+                        </ol>
+                    </div><!--best_text-->
+                </a></li>
+        </ul>
+    </div><!--best-->
+    <div id="img_box">
+        <div class="img_wrapper1">
+            <ul class="img_slide">
+                <li><img src="./images/mobile/m_review1.png" alt="리뷰이미지1">
+                </li>
+                <li><img src="./images/mobile/m_review2.png" alt="리뷰이미지2">
+                </li>
+                <li><img src="./images/mobile/m_review3.png" alt="리뷰이미지3">
+                </li>
+                <li><img src="./images/mobile/m_review4.png" alt="리뷰이미지4">
+                </li>
+                <li><img src="./images/mobile/m_review5.png" alt="리뷰이미지5">
+                </li>
+                <li><img src="./images/mobile/m_review6.png" alt="리뷰이미지6">
+                </li>
+                <li><img src="./images/mobile/m_review7.png" alt="리뷰이미지7">
+                </li>
+                <li><img src="./images/mobile/m_review8.png" alt="리뷰이미지8">
+                </li>
+                <li><img src="./images/mobile/m_review9.png" alt="리뷰이미지9">
+                </li>
+                <li><img src="./images/mobile/m_review10.png" alt="리뷰이미지9">
+                </li>
+                <li><img src="./images/mobile/m_review11.png" alt="리뷰이미지9">
+                </li>
+            </ul>
+            <ul class="img_slide">
+                <li><img src="./images/mobile/m_review1.png" alt="리뷰이미지1">
+                </li>
+                <li><img src="./images/mobile/m_review2.png" alt="리뷰이미지2">
+                </li>
+                <li><img src="./images/mobile/m_review3.png" alt="리뷰이미지3">
+                </li>
+                <li><img src="./images/mobile/m_review4.png" alt="리뷰이미지4">
+                </li>
+                <li><img src="./images/mobile/m_review5.png" alt="리뷰이미지5">
+                </li>
+                <li><img src="./images/mobile/m_review6.png" alt="리뷰이미지6">
+                </li>
+                <li><img src="./images/mobile/m_review7.png" alt="리뷰이미지7">
+                </li>
+                <li><img src="./images/mobile/m_review8.png" alt="리뷰이미지8">
+                </li>
+                <li><img src="./images/mobile/m_review9.png" alt="리뷰이미지9">
+                </li>
+                <li><img src="./images/mobile/m_review10.png" alt="리뷰이미지9">
+                </li>
+                <li><img src="./images/mobile/m_review11.png" alt="리뷰이미지9">
+                </li>
+            </ul>
+        </div><!--img_wrapper1-->
+
+
+        <div class="img_wrapper2">
+            <ul class="img_slide">
+                <li><img src="./images/mobile/m_review20.png" alt="리뷰이미지1">
+                </li>
+                <li><img src="./images/mobile/m_review21.png" alt="리뷰이미지2">
+                </li>
+                <li><img src="./images/mobile/m_review22.png" alt="리뷰이미지3">
+                </li>
+                <li><img src="./images/mobile/m_review23.png" alt="리뷰이미지4">
+                </li>
+                <li><img src="./images/mobile/m_review24.png" alt="리뷰이미지5">
+                </li>
+                <li><img src="./images/mobile/m_review25.png" alt="리뷰이미지6">
+                </li>
+                <li><img src="./images/mobile/m_review26.png" alt="리뷰이미지7">
+                </li>
+                <li><img src="./images/mobile/m_review27.png" alt="리뷰이미지8">
+                </li>
+                <li><img src="./images/mobile/m_review28.png" alt="리뷰이미지9">
+                </li>
+                <li><img src="./images/mobile/m_review29.png" alt="리뷰이미지9">
+                </li>
+                <li><img src="./images/mobile/m_review30.png" alt="리뷰이미지9">
+                </li>
+            </ul>
+            <ul class="img_slide">
+                <li><img src="./images/mobile/m_review20.png" alt="리뷰이미지1">
+                </li>
+                <li><img src="./images/mobile/m_review21.png" alt="리뷰이미지2">
+                </li>
+                <li><img src="./images/mobile/m_review22.png" alt="리뷰이미지3">
+                </li>
+                <li><img src="./images/mobile/m_review23.png" alt="리뷰이미지4">
+                </li>
+                <li><img src="./images/mobile/m_review24.png" alt="리뷰이미지5">
+                </li>
+                <li><img src="./images/mobile/m_review25.png" alt="리뷰이미지6">
+                </li>
+                <li><img src="./images/mobile/m_review26.png" alt="리뷰이미지7">
+                </li>
+                <li><img src="./images/mobile/m_review27.png" alt="리뷰이미지8">
+                </li>
+                <li><img src="./images/mobile/m_review28.png" alt="리뷰이미지9">
+                </li>
+                <li><img src="./images/mobile/m_review29.png" alt="리뷰이미지9">
+                </li>
+                <li><img src="./images/mobile/m_review30.png" alt="리뷰이미지9">
+                </li>
+            </ul>
+        </div><!--img_wrapper2-->
+    </div><!--img_box-->
+    <div id="footer">
+        <div class="footer_inner">
+            <div class="footer_textbox">
+                <div class="text_left">
+                    <p><a href="#"><svg version="1.1" id="logo_svg" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 64"
+                                style="enable-background:new 0 0 500 64;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0 {
+                                        fill: #fff;
+                                    }
+                                </style>
+                                <g>
+                                    <path class="st0"
+                                        d="M47.5,1.3v11H29.1v52H18v-52H-0.4v-11C-0.4,1.3,47.5,1.3,47.5,1.3z" />
+                                    <path class="st0" d="M135.6,1.3v63.1h-11V1.3H135.6z" />
+                                    <path class="st0" d="M183,1.1c14.2,0,20.3,8.8,20.3,18.9c0,9.5-5.5,19.8-20.3,19.8h-19.6c-1,0-1.6,0.5-1.6,1.6v22.8h-11V39.3
+c0-7.1,3-10,9.9-10h22.7c6.3,0,8.8-4.3,8.8-8.7c0-4.6-2.7-8.4-8.7-8.4h-32.8v-11L183,1.1L183,1.1z" />
+                                    <path class="st0" d="M250.2,64.2h-11V13.8c0-8.2,4.7-13.7,14.5-13.7c8.8,0,12.7,4.5,15.3,11.7L287.4,52c0.7,1.5,2,2.6,4,2.6
+c2.3,0,3.7-1.4,3.7-3.6V1.1h11.1v50.4c0,8.3-4.8,13.8-14.5,13.8c-8.8,0-12.8-4.5-15.4-11.7l-18.4-40.3c-0.8-1.9-2-2.7-3.9-2.7
+c-2.5,0-3.8,1.4-3.8,3.6L250.2,64.2L250.2,64.2z" />
+                                    <path class="st0" d="M356.1,1.1c18.3,0,28.5,10.5,28.5,31.7c0,21.1-10.1,31.4-28.5,31.4h-8.6c-18.4,0-28.5-10.3-28.5-31.4
+c0-21.2,10.2-31.7,28.5-31.7C347.5,1.1,356.1,1.1,356.1,1.1z M347.5,12.2c-12.1,0-17.5,6.2-17.5,20.7c0,14.4,5.2,20.4,17.5,20.4
+h8.6c12.1,0,17.4-6,17.4-20.5c0-14.4-5.2-20.6-17.4-20.6C356.1,12.2,347.5,12.2,347.5,12.2z" />
+                                    <path class="st0"
+                                        d="M438.7,1.1v11h-18.4v52h-11.1v-52h-18.4v-11C390.8,1.1,438.7,1.1,438.7,1.1z" />
+                                    <path class="st0" d="M499.5,1.1v11h-31.6c-6.6,0-9.5,3.1-9.5,7.9c0,5.1,3.3,7.5,9.6,7.5h31v10h-31.3c-6.4,0-9.6,2.5-9.6,7.7
+c0,5,3.1,7.9,9.5,7.9h32v11h-32c-15,0-21-7.4-21-17.2c0-7.2,3.3-12.1,9.1-14.5c-5.9-2.4-8.9-7.3-8.9-14.2
+c0-10.1,6.3-17.2,21.1-17.2L499.5,1.1L499.5,1.1z" />
+                                    <path class="st0" d="M78.6,40h10.1H90c14.8,0,20.3-10.3,20.3-19.8c0-10.1-6.1-18.9-20.3-18.9H57.7v11h32.8c6,0,8.7,3.8,8.7,8.4
+c0,4.4-2.5,8.7-8.8,8.7h-1.6H67.7H63h-0.1c-0.1,0-0.2,0-0.3,0s-0.2,0-0.3,0s-0.2,0-0.2,0c-0.1,0-0.2,0-0.3,0.1
+c-0.1,0-0.1,0-0.2,0.1c-0.1,0-0.2,0.1-0.3,0.1s-0.1,0-0.2,0.1c-0.1,0-0.2,0.1-0.3,0.1S60.7,30,60.6,30c-0.1,0-0.2,0.1-0.2,0.1
+c-0.1,0-0.1,0.1-0.2,0.1c-0.1,0-0.1,0.1-0.2,0.1c-0.1,0.1-0.1,0.1-0.2,0.2c-0.1,0-0.1,0.1-0.2,0.1c-0.1,0.1-0.1,0.1-0.2,0.2
+c-0.1,0.1-0.1,0.1-0.2,0.2c-0.1,0.1-0.1,0.1-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.2c0,0,0,0-0.1,0.1c0,0,0,0.1-0.1,0.1
+c-0.1,0.1-0.1,0.2-0.2,0.3c0,0.1-0.1,0.1-0.1,0.2c-0.1,0.1-0.1,0.2-0.1,0.3s-0.1,0.1-0.1,0.2c0,0.1-0.1,0.2-0.1,0.3
+c0,0,0,0.1,0,0.1c0,0.1-0.1,0.2-0.1,0.3s0,0.2-0.1,0.2c0,0.1,0,0.2-0.1,0.2c0,0.1,0,0.2,0,0.3s0,0.2,0,0.2c0,0.1,0,0.2,0,0.3v0.1
+v0.1c0,0.1,0,0.2,0,0.3s0,0.2,0,0.3s0,0.2,0,0.2c0,0.1,0,0.2,0.1,0.3c0,0.1,0,0.1,0.1,0.2c0,0.1,0.1,0.2,0.1,0.3s0,0.1,0.1,0.2
+c0,0.1,0.1,0.2,0.1,0.3s0.1,0.1,0.1,0.2c0,0.1,0.1,0.2,0.1,0.2c0,0.1,0.1,0.2,0.1,0.2c0,0.1,0.1,0.1,0.1,0.2
+c0.1,0.1,0.1,0.2,0.2,0.2c0,0.1,0.1,0.1,0.1,0.2c0.1,0.1,0.1,0.1,0.2,0.2c0.1,0.1,0.1,0.1,0.2,0.2c0.1,0.1,0.1,0.1,0.2,0.2
+c0.1,0.1,0.1,0.1,0.2,0.2c0,0,0,0,0.1,0.1l33.5,25.5h17.4L78.6,40z" />
+                                </g>
+                            </svg></a></p>
+                    <ul>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">문의</a></li>
+                    </ul>
+                    <h4>COPYRIGHT ⓒ TRIPNOTE ALL RIGHTS RESERVED</h4>
+                </div><!--text_left-->
+
+                <div class="text_right">
+                    <ol>
+                        <li><a href="#" class="insta"></a></li>
+                        <li><a href="#" class="youtube"></a></li>
+                        <li><a href="#" class="facebook"></a></li>
+                    </ol>
+                    <p><a href="#">CONTACT US</a></p>
+                </div><!--text_right-->
+            </div><!--footer_textbox-->
+        </div><!--footer_inner-->
+    </div><!--footer-->
+
+
+
+    <!--메인배너_오토플레이 스크립트-->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+    </script>
+    <!--제이쿼리 라이브러리 파일-->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/black_header.js"></script>
+    <script src="./js/main_banner.js"></script>
+    <script src="./js/phone_slide.js"></script>
+    <script src="./js/korea_slide.js"></script>
+    <script src="./js/sub_test.js"></script>
+
+
+
+</body>
+
+</html>
